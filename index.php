@@ -7,10 +7,10 @@
     session_start();
 
     if(!$_SESSION['codigo_persona']){
-        include('login.php');
+        include('views/login.php');
     }
     else{
-        include('horas.php');
+        include('views/horas.php');
     }
 
     ob_end_flush();

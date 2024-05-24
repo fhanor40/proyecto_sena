@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INICIO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   
+    <?php
+        include('librarys/head.php');
+    ?>
 </head>
 <body>
     <div class="container-fluid">
@@ -18,22 +17,24 @@
                         <h3>Iniciar sesión </h3>
                     </div>
                     <div class="card-body w-100">
-                        <form name="login" action="inicio_session.php" method="post">
+                        <form name="login">
                             <div class="input-group form-group mt-3">
                                 <div class="bg-secondary rounded-start">
                                     <span class="m-3"><i class="fas fa-user mt-2"></i></span>
                                 </div>
-                                <input type="email" class="form-control" placeholder="Usuario" name="username" required>
+                                <input type="email" class="form-control" placeholder="Usuario" name="username" id="username" required>                               
                             </div>
+                            <div class="alert alert-danger alerta-forformulario" id="error_usuario" role="alert"></div>
                             <div class="input-group form-group mt-3">
                                 <div class="bg-secondary rounded-start">
                                     <span class="m-3"><i class="fas fa-key mt-2"></i></span>
                                 </div>
-                                <input type="password" class="form-control" placeholder="Contraseña" name="password" required>
+                                <input type="password" class="form-control" placeholder="Contraseña" name="password" id="password" required>
                             </div>
+                            <div class="alert alert-danger alerta-forformulario" id="error_password" role="alert"></div>
 
                             <div class="form-group mt-3">
-                                <input type="submit" value="Acceder"class="btn bg-secondary float-end text-white w-100" name="login-btn">
+                                <button type="button" class="btn bg-secondary float-end text-white w-100" onclick="validar_login()">ACCEDER</button>
                             </div>
 
                             <br>
@@ -41,7 +42,7 @@
                                 <a href="formulario_registro.php" class="btn bg-secondary float-end text-white w-100">Registrate</a>
                             </div>
                         </form>
-        
+                        <script src="validate/login.js"></script>
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center">

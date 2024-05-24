@@ -1,0 +1,6 @@
+.alert.alert-danger.alerta-forformulario{
+    display: none;
+    padding: 0;
+    color: red ;
+    font-weight: bold;
+}
