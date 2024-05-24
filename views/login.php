@@ -32,6 +32,7 @@
                                 <input type="password" class="form-control" placeholder="Contraseña" name="password" id="password" required>
                             </div>
                             <div class="alert alert-danger alerta-forformulario" id="error_password" role="alert"></div>
+                            <div class="alert alert-danger alerta-forformulario" id="error_credenciales" role="alert"></div>
 
                             <div class="form-group mt-3">
                                 <button type="button" class="btn bg-secondary float-end text-white w-100" onclick="validar_login()">ACCEDER</button>

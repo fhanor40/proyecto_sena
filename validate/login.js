@@ -31,13 +31,12 @@ function validar_login() {
     
     $.ajax({
         type: "POST",
-        url: 'controller/login.php',
+        url: 'controllers/login.php',
         data: data_enviar,
         success: function(response){
             response = response;
-            
-            if(response == '1'){
-                window.location.replace('/cashth');
+            if(response == 1){
+                window.location.replace('/proyecto_sena');
             }
             else{
                 $("#error_credenciales").fadeIn('300');
